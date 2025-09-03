@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+    <p>Hello</p>
 
   <script>
     // Your JavaScript goes here!
@@ -25,6 +26,84 @@
     const pi = 3.14;
     // pi = 10; This will through an error due to assignment to ta constant value
     console.log(`The value of pi has stayed constant at ${pi}`);
+
+    console.log((3 + 2) - 76 * (1 + 1));
+    console.log((4 + 6 + 9) / 77);
+
+    let max = 57;
+    let actual = max - 13;
+    let percentage = ( actual / max) * 100;
+    console.log(`I got ${percentage}%`);
+
+    let x = 4;
+    x +=7;
+    console.log(x);
+
+    // Data types
+    // Number - represents both integers and floating numbers
+    // BigInt - stores integers greater that 2^53 - 1
+    // Strings - Represents characters. ``;backstick quotes allow us to embed variables in strings - ${}
+    // Boolean - represents true or false eg let isGreater = 4 > 1; //true console.log(isGreater);
+    // null - represents an empty value or nothing. eg let age = null;
+    // undefined - represents a value that hasn't been defined yet. eg let age; console.log(age); //undefined
+    // object - used to store collections of data. eg let person = {name: "John", age: 30, isEmployed: true};. Objects are not primitive because they store multiple values.
+    // symbol - used to create unique identifiers for objects. eg let id = Symbol("identifier");
+    // typeof operator - used to determine the data type of a variable or value. eg console.log(typeof 42); // "number"
+
+    let typeStore = typeof "Hello";
+    console.log(typeStore);
+    console.log(typeof 42);
+
+    if(x>2){
+      console.log("x is greater than 2");
+    } else {
+      console.log("x is not greater than 2");
+    }
+
+
+
+    // Functions
+
+    // function is a self contained block of code that performs a specific task. It  can also take inputs (parameters) and return an output (return value).
+    // The function can be called (invoked) multiple times in other parts of the code.
+    // a parameter is a variable in the delcaration of a functions
+    // an argument is the actual value that is passed to the function when it is called.
+
+    function sayHello(name){
+      console.log(`Hello, ${name}!`)
+    }
+
+    sayHello("Victor");
+    sayHello("Alice");
+
+    let myName = sayHello("Bob");
+    console.log(myName); // this will print undefined because the function does not have a return
+
+
+    // a return value is a value that your function produces and can be used else where in. your code.
+    // values retunred by console.log() cannot be used else where in your code.
+
+    function addition(a,b){
+      return a + b;
+    }
+
+    let sum = addition(5, 10); // one way of using the return value in other parts of your code is to store it in a variable
+    console.log(`The sum is ${sum}`);
+    console.log( `The sum is ${addition(40,58)}`); // another way is to use the return value directly in other expressions other than storing it in variables.
+
+    function sayHelloAgain(name){
+      return `Hello, ${name}!`;
+    }
+    let secondGreeting = sayHelloAgain("ariana arena");
+    console.log(secondGreeting.toUpperCase());
+
+
+    // A side efffect is anything the function does outside of the function apart from returning a value.
+    // Side effects can 
+
+
+
+
 
   </script>
 
