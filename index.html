@@ -99,8 +99,58 @@
 
 
     // A side efffect is anything the function does outside of the function apart from returning a value.
-    // Side effects can 
+    // Side effects can  include updating of a variable decalred outside the function, modifying an array or object declared out-side the function, or outputting a string to the console.
 
+    let addCalls = 0;
+    function addsideEffects(x,y){ // side effects function
+      addCalls++; // sideeffect
+      console.log(`x was ${x} and y was ${y}`); // sideeffect
+      return x + y;
+    }
+
+    addsideEffects(4,5);
+    console.log(`The sum is ${addsideEffects(4,5)}`);
+
+    let sum2 = addsideEffects(Math.PI, Math.E);
+    addsideEffects;
+    console.log(`addCalls: ${addCalls}`);
+
+
+    // Passing a Fuction as an Argument
+    // A function can be stored in avariable or it can be passed as an argument in another function
+    // A callback is a function that is passed as an argument to another function and is executed inside that function.
+
+    function sayHi () {
+      console.log("Hi, we have passed a function as an argument");
+    }
+
+    setTimeout(sayHi, 2000); // 
+
+    sayHi; // this refers to the function itself
+    sayHi(); // this is a function call.
+
+
+    // Other Function Syntaxes
+    // A function expressoin is an expression that evaluates(returns) a function.
+    // It can't be written at a start of a line, otherwise Javascript will treat it as a function declaration.
+    // Function expressions don't include name, although you can include it if you want.
+    // Function expressons are often used in situations where functions need to be treated as values.
+
+    let addExpression = function(a,b){
+      return a + b;
+    };
+    addExpression(9,5);
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
