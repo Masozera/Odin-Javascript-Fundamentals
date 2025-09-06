@@ -160,6 +160,22 @@
     console.log("Beep");
   }, 2000);
 
+
+  function englishWord (passedNumber){
+    let words = ["zero", "one", "two", "three", "four"];
+
+    if (passedNumber >= 0 && passedNumber<=5){
+      return words[passedNumber];
+    } else {
+      return "Number out of range";
+    }
+  }
+
+  console.log(englishWord(3));
+
+
+
+
   </script>
 
 </body>
